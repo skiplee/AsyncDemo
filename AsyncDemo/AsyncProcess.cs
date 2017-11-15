@@ -21,7 +21,7 @@ namespace AsyncDemo
             {
                 for (var i = 0; i < 100; i++)
                 {
-                    progress.Report(i);
+                    progress.Report(100-i);
                     await Task.Delay(TimeSpan.FromMilliseconds(Setting.UpdateSpeed), token).ConfigureAwait(false);
                     if (_goBoom)
                         throw new BoomException();
